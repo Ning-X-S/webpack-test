@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "es2015",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "chrome >= 44",
+            "ie >= 9"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": []
+}
