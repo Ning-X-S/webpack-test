@@ -1,11 +1,8 @@
 const path = require('path');
+const { merge } = require('webpack-merge')
+const common = require('./webpack.common')
 
-const config = {
-  entry: ['babel-polyfill', path.resolve('./src/index.js')],
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve('./dist')
-  },
+const config = merge(common, {
   module: {
     rules: [
       {
@@ -49,6 +46,6 @@ const config = {
       }
     ],
   }
-}
+})
 
 module.exports = config
